@@ -1,0 +1,36 @@
+# OpenClaw 备份 .gitignore（脱敏版本）
+
+# 敏感凭证
+credentials/
+exec-approvals.json
+devices/paired.json
+
+# 会话历史
+agents/*/sessions/
+gateways/*/state/agents/main/sessions/
+gateways/*/state/agents/main/sessions-backup*/
+
+# 临时和缓存
+logs/
+media/
+telegram/
+canvas/
+completions/
+*.tmp
+delivery-queue/
+shared-state/
+subagents/
+
+# 备份文件
+*.backup-*
+*.bak
+gateways/*/openclaw.json.backup*
+gateways/*/gateway.log.backup
+
+# 嵌套仓库
+plugins/*/
+workspace/
+
+# 依赖
+node_modules/
+*.log
